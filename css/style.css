@@ -1,68 +1,126 @@
+/* =========================
+   VARIABLES CSS
+========================= */
+
 :root {
---primary: #4f46e5;
---dark: #0f172a;
---light: #f8fafc;
---accent: #22c55e;
---text: #1e293b;
---radius: 12px;
+    --primary-color: #0d6efd;
+    --secondary-color: #198754;
+    --dark-color: #212529;
+    --light-color: #f8f9fa;
+    --text-color: #495057;
+    --white-color: #ffffff;
+
+    --title-font: 'Space Grotesk', sans-serif;
+    --body-font: 'Poppins', sans-serif;
+
+    --spacing-sm: 10px;
+    --spacing-md: 20px;
+    --spacing-lg: 40px;
 }
+
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================
+   BASE
+========================= */
 
 body {
-font-family: 'Poppins', sans-serif;
-background: var(--light);
-color: var(--text);
+    font-family: var(--body-font);
+    color: var(--text-color);
+    background-color: var(--white-color);
+    line-height: 1.6;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--title-font);
+    color: var(--dark-color);
+    margin-bottom: 15px;
+}
+
+section {
+    padding: 60px 0;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* =========================
+   NAVBAR
+========================= */
 
 .navbar {
-background: white;
-transition: 0.3s;
+    background-color: var(--white-color) !important;
+    padding: 15px 0;
 }
 
-.navbar.scrolled {
-box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+.navbar-brand {
+    font-family: var(--title-font);
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--primary-color) !important;
 }
 
-.hero {
-height: 90vh;
-display: flex;
-flex-direction: column;
-justify-content: center;
-background: linear-gradient(var(--primary), #1e1b4b);
-color: white;
+.nav-link {
+    font-weight: 500;
 }
 
-.grid-bento {
-display: grid;
-grid-template-columns: repeat(3, 1fr);
-gap: 15px;
+.nav-link:hover {
+    color: var(--primary-color) !important;
 }
 
-.card-bento {
-background: white;
-padding: 20px;
-border-radius: var(--radius);
-transition: 0.3s;
+/* =========================
+   HERO
+========================= */
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
 }
 
-.card-bento:hover {
-transform: translateY(-5px);
+.hero h2 {
+    font-size: 1.3rem;
+    font-weight: 400;
 }
 
-.cat-card {
-background: white;
-padding: 20px;
-border-radius: var(--radius);
-margin-top: 10px;
-transition: 0.3s;
+/* =========================
+   BUTTONS
+========================= */
+
+.btn {
+    border-radius: 8px;
 }
 
-.cat-card:hover {
-background: var(--primary);
-color: white;
+/* =========================
+   CARDS
+========================= */
+
+.card {
+    border: none;
 }
 
-.cta {
-background: var(--primary);
-color: white;
-padding: 50px;
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background-color: var(--light-color);
+}
+
+footer h4 {
+    margin-bottom: 15px;
 }
