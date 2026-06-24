@@ -226,3 +226,89 @@ footer h4 {
     color: gold;
     font-size: 1.2rem;
 }
+/* =========================
+   TABLETTE (768px)
+========================= */
+@media (max-width: 768px) {
+
+    .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 60px 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.8rem;
+    }
+
+    .bento-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .bento-card.large {
+        grid-column: span 2;
+    }
+
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+
+    .category-card {
+        padding: 20px;
+    }
+}
+
+/* =========================
+   MOBILE (576px)
+========================= */
+@media (max-width: 576px) {
+
+    .hero {
+        padding-top: 100px;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .hero .btn {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .bento-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .bento-card.large {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+
+    .testimonial {
+        padding: 20px;
+    }
+
+    footer {
+        text-align: center;
+    }
+}
+
+/* =========================
+   GRAND ÉCRAN (1200px+)
+========================= */
+@media (min-width: 1200px) {
+
+    .container {
+        max-width: 1140px;
+    }
+
+    .hero-content h1 {
+        font-size: 4.5rem;
+    }
+}
