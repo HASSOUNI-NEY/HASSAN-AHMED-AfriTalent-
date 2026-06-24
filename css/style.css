@@ -1,0 +1,68 @@
+:root {
+--primary: #4f46e5;
+--dark: #0f172a;
+--light: #f8fafc;
+--accent: #22c55e;
+--text: #1e293b;
+--radius: 12px;
+}
+
+body {
+font-family: 'Poppins', sans-serif;
+background: var(--light);
+color: var(--text);
+}
+
+.navbar {
+background: white;
+transition: 0.3s;
+}
+
+.navbar.scrolled {
+box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.hero {
+height: 90vh;
+display: flex;
+flex-direction: column;
+justify-content: center;
+background: linear-gradient(var(--primary), #1e1b4b);
+color: white;
+}
+
+.grid-bento {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 15px;
+}
+
+.card-bento {
+background: white;
+padding: 20px;
+border-radius: var(--radius);
+transition: 0.3s;
+}
+
+.card-bento:hover {
+transform: translateY(-5px);
+}
+
+.cat-card {
+background: white;
+padding: 20px;
+border-radius: var(--radius);
+margin-top: 10px;
+transition: 0.3s;
+}
+
+.cat-card:hover {
+background: var(--primary);
+color: white;
+}
+
+.cta {
+background: var(--primary);
+color: white;
+padding: 50px;
+}
