@@ -250,3 +250,60 @@
 
 </body>
 </html>
+<form id="contactForm">
+
+    <div class="mb-3">
+        <label>Nom</label>
+        <input type="text" class="form-control" id="nom">
+        <small class="text-danger" id="nomError"></small>
+    </div>
+
+    <div class="mb-3">
+        <label>Prénom</label>
+        <input type="text" class="form-control" id="prenom">
+        <small class="text-danger" id="prenomError"></small>
+    </div>
+
+    <div class="mb-3">
+        <label>Email</label>
+        <input type="email" class="form-control" id="email">
+        <small class="text-danger" id="emailError"></small>
+    </div>
+
+    <div class="mb-3">
+        <label>Sujet</label>
+
+        <select class="form-select" id="sujet">
+
+            <option value="">Choisir</option>
+            <option>Mission</option>
+            <option>Partenariat</option>
+            <option>Support</option>
+
+        </select>
+
+        <small class="text-danger" id="sujetError"></small>
+
+    </div>
+
+    <div class="mb-3">
+        <label>Message</label>
+
+        <textarea
+        id="message"
+        rows="5"
+        class="form-control"></textarea>
+
+        <small class="text-danger" id="messageError"></small>
+
+    </div>
+
+    <button class="btn btn-primary">
+        Envoyer
+    </button>
+
+</form>
+
+<div id="successMessage" class="alert alert-success mt-3 d-none">
+    Message envoyé avec succès !
+</div>
