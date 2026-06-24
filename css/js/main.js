@@ -1,42 +1,80 @@
 
-)
-// YEAR FOOTER
-document.getElementById("year").textContent = new Date().getFullYear();
 
+// =====================
 // DARK MODE
-const btn = document.getElementById("darkModeToggle");
+// =====================
 
-btn.addEventListener("click", () => {
-document.body.classList.toggle("dark");
-localStorage.setItem("dark", document.body.classList.contains("dark"));
-});
+const themeToggle = document.getElementById("themeToggle");
 
-if(localStorage.getItem("dark") === "true"){
-document.body.classList.add("dark");
+if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark-mode");
 }
 
+if (themeToggle) {
+
+    themeToggle.addEventListener("click", () => {
+
+        document.body.classList.toggle("dark-mode");
+
+        if (document.body.classList.contains("dark-mode")) {
+
+            localStorage.setItem("theme", "dark");
+
+        } else {
+
+            localStorage.setItem("theme", "light");
+
+        }
+
+    });
+
+}
+
+// =====================
 // NAVBAR SCROLL
+// =====================
+
+const navbar = document.querySelector(".navbar");
+
 window.addEventListener("scroll", () => {
-document.querySelector(".navbar").classList.toggle("scrolled", window.scrollY > 50);
+
+    if (window.scrollY > 50) {
+
+        navbar.classList.add("scrolled");
+
+    } else {
+
+        navbar.classList.remove("scrolled");
+
+    }
+
 });
 
-// COUNTERS
-const counters = document.querySelectorAll(".counter");
+// =====================
+// BOUTON RETOUR EN HAUT
+// =====================
 
-const observer = new IntersectionObserver(entries => {
-entries.forEach(entry => {
-if(entry.isIntersecting){
-const el = entry.target;
-let count = 0;
-const target = +el.dataset.target;
+const backToTop = document.getElementById("backToTop");
 
-const interval = setInterval(() => {
-count++;
-el.textContent = count;
-if(count >= target) clearInterval(interval);
-}, 1);
-}
+window.addEventListener("scroll", () => {
+
+    if (window.scrollY > 300) {
+
+        backToTop.style.display = "block";
+
+    } else {
+
+        backToTop.style.display = "none";
+
+    }
+
 });
-});
 
-counters.forEach(c => observer.observe(c));
+backToTop.addEventListener("click", () => {
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+});
