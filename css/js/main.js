@@ -2,6 +2,7 @@
 
 
 
+
 // =====================
 // DARK MODE
 // =====================
@@ -266,3 +267,40 @@ form.addEventListener("submit", function(e) {
 });
 
 }
+/* =====================================
+   COMMIT 9 - COMMENTAIRES DU CODE
+===================================== */
+
+/* Gestion du Dark Mode */
+const themeToggle = document.getElementById("themeToggle");
+
+/* Gestion de la navbar au scroll */
+window.addEventListener("scroll", () => {
+    const navbar = document.querySelector(".navbar");
+
+    if (window.scrollY > 50) {
+        navbar.classList.add("navbar-scrolled");
+    } else {
+        navbar.classList.remove("navbar-scrolled");
+    }
+});
+
+/* Bouton retour en haut */
+const backToTop = document.getElementById("backToTop");
+
+/* Apparition du bouton */
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+        backToTop.style.display = "block";
+    } else {
+        backToTop.style.display = "none";
+    }
+});
+
+/* Retour fluide en haut */
+backToTop.addEventListener("click", () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
